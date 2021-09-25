@@ -16,7 +16,7 @@ const TicketTable = ({data}) => {
                     data.length ? data.map((row)=>(
                         <tr key={row.id}>
                             <td>{row.id}</td>
-                            <td>{row.Status}</td>
+                            <td>{row.Subject}</td>
                             <td>{row.Date}</td>
                     </tr>
                     )): "Record not found"

@@ -2,6 +2,7 @@ import React from 'react'
 import '../Layout/header.css'
 import {Navbar,Nav,NavbarBrand} from 'react-bootstrap';
 import logo from '../../assets/img/logo.png';
+import {LinkContainer} from 'react-router-bootstrap'
 const Header = () => {
     return (
         <Navbar className="bg-info navbar-dark" collapseOnSelect expand="md">
@@ -9,9 +10,10 @@ const Header = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="px-2">
                 <Nav className="mx-auto">
-                    <Nav.Link href="/dashboard" className="text-white">Dashboard</Nav.Link>
-                    <Nav.Link href="/dashboard" className="text-white">Tickets</Nav.Link>
-                    <Nav.Link href="/dashboard" className="text-white">Logout</Nav.Link>
+                    <LinkContainer to="/dashboard"><Nav.Link  className="text-white">Dashboard</Nav.Link></LinkContainer>
+                    <LinkContainer to="/ticket-list"><Nav.Link  className="text-white">Tickets</Nav.Link></LinkContainer>
+                    <LinkContainer to=""><Nav.Link  className="text-white">Logout</Nav.Link></LinkContainer>
+                    
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

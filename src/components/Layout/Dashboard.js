@@ -4,6 +4,7 @@ import './dashboard.css';
 import TicketTable from './TicketTable.comp';
 import data from '../../assets/data.json';
 import PageBreadcrumb from './Breadcrumb';
+import {Link} from 'react-router-dom'
 const Dashboard = () => {
     return (
         <Container>
@@ -14,7 +15,9 @@ const Dashboard = () => {
             </Row>
             <Row>
                 <Col className="text-ceter mt-1 mb-2 addNewTicketDiv">
+                    <Link to="/add-ticket">
                     <Button variant="info"  style={{padding:"10px 30px"}}>Add New Ticket</Button>
+                    </Link>
                 </Col>
             </Row>
             <Row>

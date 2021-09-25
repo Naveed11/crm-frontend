@@ -4,6 +4,7 @@ import PageBreadcrumb from '../../components/Layout/Breadcrumb';
 import SearchForm from '../../components/Layout/SearchForm.comp';
 import TicketTable from '../../components/Layout/TicketTable.comp';
 import data from '../../assets/data.json';
+import {Link} from 'react-router-dom'
 const TicketListing = () => {
     const [str,setStr] = useState();
     const [dispTickets,setDispTickets] = useState(data);
@@ -29,7 +30,9 @@ const TicketListing = () => {
             {/* Add New Ticket Button & Search form */}
             <Row>
                 <Col>
+                <Link to="/add-ticket">
                 <Button variant="info text-white mt-4 mb-2">Add New Ticket</Button>
+                </Link>
                 </Col>
 
                 <Col className="text-right mt-4 mb-2">
